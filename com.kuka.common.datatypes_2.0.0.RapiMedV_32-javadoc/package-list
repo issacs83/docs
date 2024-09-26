@@ -1,0 +1,7 @@
+com.kuka.roboticsAPI.controllerModel
+com.kuka.roboticsAPI.deviceModel
+com.kuka.roboticsAPI.executionModel
+com.kuka.roboticsAPI.ioModel
+com.kuka.roboticsAPI.motionModel
+com.kuka.roboticsAPI.uiModel
+com.kuka.roboticsAPI.uiModel.userKeys

@@ -1,0 +1,600 @@
+/* Javadoc style sheet */
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Droid Sans Mono';
+    src: url('resources/fonts/DroidSansMono-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kuka Bulo';
+    src: url('resources/fonts/KUKA-Bulo-WEB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kuka Bulo';
+    src: url('resources/fonts/KUKA-Bulo-Bold-WEB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Overall document style */
+
+body {
+    background-color:#ffffff;
+    color:#595d61;
+    font-family: 'Kuka Bulo', Calibri, 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-size:16px;
+    margin:0;
+}
+a:link, a:visited {
+    text-decoration:none;
+    color: #ff5800;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+    color:#FF5800;
+}
+a:active {
+    text-decoration:none;
+    color:#cb4800;
+}
+a[name] {
+    color:#595d61;
+}
+a[name]:hover {
+    text-decoration:none;
+    color:#595d61;
+}
+pre {
+    font-size:0.875em;
+    font-family: 'Droid Sans Mono', monospace;
+}
+code {
+    font-family: 'Droid Sans Mono', monospace;
+}
+h1 {
+    font-size:1.8em;
+}
+h2 {
+    font-size:1.5em;
+}
+h3 {
+    font-size:1.2em;
+}
+h4 {
+    font-size:1.1em;
+}
+h5 {
+    font-size:1.05em;
+}
+h6 {
+    font-size:1em;
+}
+ul {
+    list-style-type:disc;
+}
+code, tt {
+    font-size:14px;
+}
+dt code {
+    font-size:14px;
+}
+table tr td dt code {
+    font-size:14px;
+    vertical-align:top;
+}
+sup {
+    font-size:.6em;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #D8D9DA;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+/* Document title and Copyright styles */
+
+.clear {
+    clear:both;
+    height:0px;
+    overflow:hidden;
+}
+.aboutLanguage {
+    float:right;
+    padding:0px 21px;
+    font-size:.8em;
+    z-index:200;
+    margin-top:-7px;
+}
+.legalCopy {
+    margin-left:.5em;
+    display:none;
+}
+.bar a, .bar a:link, .bar a:visited, .bar a:active {
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.bar a:hover, .bar a:focus {
+    color:#bb7a2a;
+}
+.tab {
+    background-color:#0066FF;
+    color:#ffffff;
+    padding:8px;
+    width:5em;
+    font-weight:bold;
+}
+/*
+Navigation bar styles
+*/
+.bar {
+    padding:.8em .5em .4em .8em;
+    height:auto;/*height:1.8em;*/
+    font-size:1em;
+    margin:0;
+}
+.topNav {
+    background: #FF5800;
+    background-image: linear-gradient(to right,#fff 0%,#dbdcdd 100%);
+    background-image: -webkit-linear-gradient(left,#fff 0%,#dbdcdd 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffdbdcdd',GradientType=1); */
+    color:#676c71;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    float:left;
+    padding:0;
+    width:100%;
+    clear:right;
+    padding: 15px 0;
+    overflow:hidden;
+    position: relative;
+}
+.topNav:after {
+    content: '';
+    background-image: url('resources/img/KUKA-Logo-Orange-Gradient-RGB-S.png');
+    background-repeat: no-repeat;
+    width: 117px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+.bottomNav {
+    margin-top:10px;
+    background-image: -o-linear-gradient(left,#fff 0%,#dbdcdd 100%);
+    background-image: -webkit-linear-gradient(left,#fff 0%,#dbdcdd 100%);
+    background-image: linear-gradient(to right,#fff 0%,#dbdcdd 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffdbdcdd',GradientType=1); */
+    color:#FFFFFF;
+    float:left;
+    width:100%;
+    clear:right;
+    overflow:hidden;
+}
+
+.bottomNav:after {
+    content: 'Copyright © 2018. All rights reserved.';
+    float: right;
+    font-size: 14px;
+    color: #878d91;
+    padding: 10px;
+}
+
+.bottomNav ul.navList li,
+.bottomNav .navList .navBarCell1Rev {
+    padding: 10px;
+}
+
+.subNav {
+    background-image: -o-linear-gradient(left,#fff 0%,#dbdcdd 100%);
+    background-image: -webkit-linear-gradient(left,#fff 0%,#dbdcdd 100%);
+    background-image: linear-gradient(to right,#fff 0%,#dbdcdd 100%);
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffdbdcdd',GradientType=1); */
+    border-top: 1px solid #fff;
+    /* color: #595d61; */
+    color: #878d91;
+    clear: both;
+    padding: 10px;
+    overflow:hidden;
+}
+.subNav:after {
+    content: "";
+    display: block;
+    clear:both;
+}
+
+.subNav a {
+    color: #fff;
+    /* padding: 10px; */
+}
+
+.topNav + .subNav {
+    background:none;
+    background-color:#676C71;
+    color: #BABDBF;
+    border-bottom: none;
+    /* float:left;
+    width:100%; */
+    padding: 10px;
+    font-size: 15px;
+    border-top: none;
+}
+
+.subNav:last-of-type a {
+    color: #595d61;
+}
+
+
+.subNav div {
+    clear:left;
+    float:left;
+    /* padding:0 0 5px 6px; */
+}
+.subNav ul.navList li {
+    padding: 5px 10px 10px 0;
+}
+ul.navList, ul.subNavList {
+    float:left;
+    margin:0 25px 0 0;
+    padding:0;
+}
+ul.navList li{
+    list-style:none;
+    float:left;
+    padding:5px 10px;
+}
+.topNav .navList li, .bottomNav .navList li {
+    color: #A4A7AA;
+}
+ul.subNavList li{
+    list-style:none;
+    float:left;
+}
+.topNav a:link, .topNav a:active, .topNav a:visited, .bottomNav a:link, .bottomNav a:active, .bottomNav a:visited {
+    color:#676c71;
+    text-decoration:none;
+}
+.topNav a:hover, .bottomNav a:hover {
+    text-decoration:none;
+    color:#FF5800;
+}
+.navBarCell1Rev {
+    color:#ff5800 !important;
+    /*margin: auto 5px;*/
+}
+
+/* Page header and footer styles */
+
+.header, .footer {
+    clear:both;
+    margin:0 20px;
+    padding:20px 0 0 0;
+}
+.indexHeader {
+    margin:10px;
+    position:relative;
+}
+.indexHeader h1 {
+    font-size:1.3em;
+}
+.title {
+    color: #676C71;
+    margin:10px 0;
+}
+.subTitle {
+    margin:5px 0 0 0;
+}
+.header ul {
+    margin:0 0 25px 0;
+    padding:0;
+}
+.footer ul {
+    margin:20px 0 5px 0;
+}
+.header ul li, .footer ul li {
+    list-style:none;
+    font-size:1.2em;
+}
+
+/* Heading styles */
+
+div.details ul.blockList ul.blockList ul.blockList li.blockList h4, div.details ul.blockList ul.blockList ul.blockListLast li.blockList h4 {
+    background-color:#ECEDEE;
+    border-top:1px solid #D1D3D5;
+    border-bottom:1px solid #D1D3D5;
+    margin:0 0 5px -10px;
+    padding:5px 10px;
+}
+ul.blockList ul.blockList ul.blockList li.blockList h3 {
+    background-color:#ECEDEE;
+    border-top:1px solid #D1D3D5;
+    border-bottom:1px solid #D1D3D5;
+    margin:0 0 5px -10px;
+    padding:5px 10px;
+}
+ul.blockList ul.blockList li.blockList h3 {
+    padding:0;
+    margin:15px 0;
+}
+ul.blockList li.blockList h2 {
+    /* padding:0px 0 20px 0; */
+}
+/*
+Page layout container styles
+*/
+.contentContainer, .sourceContainer, .classUseContainer, .serializedFormContainer, .constantValuesContainer {
+    clear:both;
+    padding:10px 20px;
+    position:relative;
+}
+.indexContainer {
+    margin:10px;
+    position:relative;
+    font-size:1.0em;
+}
+.indexContainer h2 {
+    font-size:1.1em;
+    padding:0 0 3px 0;
+}
+.indexContainer a {
+    color: #595d61;
+}
+.indexContainer a:hover {
+    color: #ff5800;
+}
+.indexContainer ul {
+    margin:0;
+    padding:0;
+}
+.indexContainer ul li {
+    list-style:none;
+}
+.contentContainer .description dl dt, .contentContainer .details dl dt, .serializedFormContainer dl dt {
+    font-size:1.1em;
+    font-weight:bold;
+    margin:10px 0 0 0;
+    color:#4E4E4E;
+}
+.contentContainer .description dl dd, .contentContainer .details dl dd, .serializedFormContainer dl dd {
+    margin:10px 0 10px 20px;
+}
+.serializedFormContainer dl.nameValue dt {
+    margin-left:1px;
+    font-size:1.1em;
+    display:inline;
+    font-weight:bold;
+}
+.serializedFormContainer dl.nameValue dd {
+    margin:0 0 0 1px;
+    font-size:1.1em;
+    display:inline;
+}
+/*
+List styles
+*/
+ul.horizontal li {
+    display:inline;
+    font-size:0.9em;
+}
+ul.inheritance {
+    margin:0;
+    padding:0;
+}
+ul.inheritance li {
+    display:inline;
+    list-style:none;
+}
+ul.inheritance li ul.inheritance {
+    margin-left:15px;
+    padding-left:15px;
+    padding-top:1px;
+}
+ul.blockList, ul.blockListLast {
+    margin:10px 0 10px 0;
+    padding:0;
+}
+ul.blockList li.blockList, ul.blockListLast li.blockList {
+    list-style:none;
+    margin-bottom:25px;
+}
+ul.blockList ul.blockList li.blockList, ul.blockList ul.blockListLast li.blockList {
+    padding:0px 20px 5px 10px;
+    border:1px solid #E1E2E3;
+    background-color:#FAFAFB;
+}
+ul.blockList ul.blockList ul.blockList li.blockList, ul.blockList ul.blockList ul.blockListLast li.blockList {
+    padding:0 0 10px 10px;
+    background-color:#ffffff;
+    border:1px solid #D1D3D5;
+    border-top:none;
+}
+ul.blockList ul.blockList ul.blockList ul.blockList li.blockList {
+    margin-left:0;
+    padding-left:0;
+    padding-bottom:15px;
+    border:none;
+    border-bottom:1px solid #D1D3D5;
+}
+ul.blockList ul.blockList ul.blockList ul.blockList li.blockListLast {
+    list-style:none;
+    border-bottom:none;
+    padding-bottom:0;
+}
+table tr td dl, table tr td dl dt, table tr td dl dd {
+    margin-top:0;
+    margin-bottom:1px;
+}
+
+/* Table styles */
+
+.contentContainer table, .classUseContainer table, .constantValuesContainer table {
+    border-bottom:1px solid #D1D3D5;
+    width:100%;
+}
+.contentContainer ul li table, .classUseContainer ul li table, .constantValuesContainer ul li table {
+    width:100%;
+}
+.contentContainer .description table, .contentContainer .details table {
+    border-bottom:none;
+}
+.contentContainer ul li table th.colOne, .contentContainer ul li table th.colFirst, .contentContainer ul li table th.colLast, .classUseContainer ul li table th, .constantValuesContainer ul li table th, .contentContainer ul li table td.colOne, .contentContainer ul li table td.colFirst, .contentContainer ul li table td.colLast, .classUseContainer ul li table td, .constantValuesContainer ul li table td{
+    vertical-align:top;
+    padding-right:20px;
+}
+.contentContainer ul li table th.colLast, .classUseContainer ul li table th.colLast,.constantValuesContainer ul li table th.colLast,
+.contentContainer ul li table td.colLast, .classUseContainer ul li table td.colLast,.constantValuesContainer ul li table td.colLast,
+.contentContainer ul li table th.colOne, .classUseContainer ul li table th.colOne,
+.contentContainer ul li table td.colOne, .classUseContainer ul li table td.colOne {
+    padding-right:3px;
+}
+.overviewSummary caption, .packageSummary caption, .contentContainer ul.blockList li.blockList caption, .summary caption, .classUseContainer caption, .constantValuesContainer caption {
+    position:relative;
+    text-align:left;
+    background-repeat:no-repeat;
+    font-weight:bold;
+    clear:none;
+    overflow:hidden;
+    padding:0px;
+    margin:0px;
+    margin-bottom: 10px;
+}
+caption a:link, caption a:hover, caption a:active, caption a:visited {
+    /*color:#FFFFFF;*/
+}
+.overviewSummary caption span, .packageSummary caption span, .contentContainer ul.blockList li.blockList caption span, .summary caption span, .classUseContainer caption span, .constantValuesContainer caption span {
+    white-space:nowrap;
+    display:block;
+    float:left;
+    margin-bottom: 5px;
+}
+.overviewSummary .tabEnd, .packageSummary .tabEnd, .contentContainer ul.blockList li.blockList .tabEnd, .summary .tabEnd, .classUseContainer .tabEnd, .constantValuesContainer .tabEnd {
+    display: none;
+    width:10px;
+    background-repeat:no-repeat;
+    background-position:top right;
+    position:relative;
+    float:left;
+}
+ul.blockList ul.blockList li.blockList table {
+    margin:0 0 12px 0px;
+    width:100%;
+}
+.tableSubHeadingColor {
+    background-color: #EEEEFF;
+}
+.altColor {
+    background-color:#FAFAFB;
+}
+.rowColor {
+    background-color:#ffffff;
+}
+.overviewSummary td, .packageSummary td, .contentContainer ul.blockList li.blockList td, .summary td, .classUseContainer td, .constantValuesContainer td {
+    text-align:left;
+    padding:10px;
+}
+th.colFirst, th.colLast, th.colOne, .constantValuesContainer th {
+    background:#ECEDEE;
+    border-top:1px solid #D1D3D5;
+    border-bottom:1px solid #D1D3D5;
+    text-align:left;
+    padding:5px 5px 5px 10px;
+}
+td.colOne a:link, td.colOne a:active, td.colOne a:visited, td.colOne a:hover, td.colFirst a:link, td.colFirst a:active, td.colFirst a:visited, td.colFirst a:hover, td.colLast a:link, td.colLast a:active, td.colLast a:visited, td.colLast a:hover, .constantValuesContainer td a:link, .constantValuesContainer td a:active, .constantValuesContainer td a:visited, .constantValuesContainer td a:hover {
+    font-weight:bold;
+}
+td.colFirst, th.colFirst {
+    border-left:1px solid #D1D3D5;
+    white-space:nowrap;
+}
+td.colLast, th.colLast {
+    border-right:1px solid #D1D3D5;
+}
+td.colOne, th.colOne {
+    border-right:1px solid #D1D3D5;
+    border-left:1px solid #D1D3D5;
+}
+table.overviewSummary  {
+    padding:0px;
+    margin-left:0px;
+}
+table.overviewSummary td.colFirst, table.overviewSummary th.colFirst,
+table.overviewSummary td.colOne, table.overviewSummary th.colOne {
+    width:25%;
+    vertical-align:middle;
+}
+table.packageSummary td.colFirst, table.overviewSummary th.colFirst {
+    width:25%;
+    vertical-align:middle;
+}
+.tableTab, .activeTableTab {
+    padding: 0 5px;
+    margin-right: 10px;
+}
+.activeTableTab {
+    color: #ff5800;
+    border-bottom: 2px solid #ff5800;
+}
+.tableTab a:hover {
+    text-decoration: none;
+}
+/*
+Content styles
+*/
+.description pre {
+    margin-top:0;
+}
+.deprecatedContent {
+    margin:0;
+    padding:10px 0;
+}
+.docSummary {
+    padding:0;
+}
+/*
+Formatting effect styles
+*/
+.sourceLineNo {
+    color:green;
+    padding:0 30px 0 0;
+}
+h1.hidden {
+    visibility:hidden;
+    overflow:hidden;
+    font-size:.9em;
+}
+.block {
+    display:block;
+    margin:3px 0 0 0;
+}
+.strong {
+    font-weight:bold;
+}
+
+/*
+ Fixes for a number of issues with the default stylesheet.
+ */
+
+/* Fixes huge font size in <pre>{@code} blocks. */
+pre code {
+    font-size:inherit;
+}
+
+/*
+ Fixes issue with no blank line before <pre> in class-level Javadoc
+ when the <pre> is preceded by a block of text with no <p>.
+ */
+.description .block pre {
+    margin-top:1em;
+}
+
+.skipNav {
+    display: none;
+}

@@ -1,0 +1,8 @@
+com.kuka.mastering.provider
+com.kuka.mastering.provider.algorithms
+com.kuka.mastering.provider.algorithms.emd
+com.kuka.mastering.provider.algorithms.manual
+com.kuka.mastering.provider.algorithms.mmd
+com.kuka.mastering.provider.exceptions
+com.kuka.mastering.provider.motions
+com.kuka.mastering.provider.preconditions
